@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div style="color:blue">
+    <form action="{{ url_for('predict')}}" method="post">
+      <h2>Predictive analysis</h2>
+
+
+      <h3>Select Car Model :</h3>
+      <br>
+      <select name="carModel" id="carModel" required="required">
+        <option value="Car_Name_800">800</option>
+        <option value="Car_Name_Activa 3g">Activa 3g</option>
+        <option value="Car_Name_Activa 4g">Activa 4g</option>
+        <option value="Car_Name_Bajaj  ct 100">Bajaj ct 100</option>
+        <option value="Car_Name_Bajaj Avenger 150">Bajaj Avenger 150</option>
+        <option value="Car_Name_Bajaj Avenger 150 street">Bajaj Avenger 150 street</option>
+        <option value="Car_Name_Bajaj Avenger 220">Bajaj Avenger 220</option>
+        <option value="Car_Name_Bajaj Avenger 220 dtsi">Bajaj Avenger 220 dtsi</option>
+        <option value="Car_Name_Bajaj Avenger Street 220">Bajaj Avenger Street 220</option>
+        <option value="Car_Name_Bajaj Discover 100">Bajaj Discover 100</option>
+        <option value="Car_Name_Bajaj Discover 125">Bajaj Discover 125</option>
+        <option value="Car_Name_Bajaj Dominar 400">Bajaj Dominar 400</option>
+        <option value="Car_Name_Bajaj Pulsar  NS 200">Bajaj Pulsar NS 200</option>
+        <option value="Car_Name_Bajaj Pulsar 135 LS">Bajaj Pulsar 135 LS</option>
+        <option value="Car_Name_Bajaj Pulsar 150">Bajaj Pulsar 150</option>
+        <option value="Car_Name_Bajaj Pulsar 220 F">Bajaj Pulsar 220 F</option>
+        <option value="Car_Name_Bajaj Pulsar NS 200">Bajaj Pulsar NS 200</option>
+        <option value="Car_Name_Bajaj Pulsar RS200">Bajaj Pulsar RS200</option>
+        <option value="Car_Name_Hero  CBZ Xtreme">Hero CBZ Xtreme</option>
+        <option value="Car_Name_Hero  Ignitor Disc">Hero Ignitor Disc</option>
+        <option value="Car_Name_Hero Extreme">Hero Extreme</option>
+        <option value="Car_Name_Hero Glamour">Hero Glamour</option>
+        <option value="Car_Name_Hero Honda CBZ extreme">Hero Honda CBZ extreme</option>
+        <option value="Car_Name_Hero Honda Passion Pro">Hero Honda Passion Pro</option>
+        <option value="Car_Name_Hero Hunk">Hero Hunk</option>
+        <option value="Car_Name_Hero Passion Pro">Hero Passion Pro</option>
+        <option value="Car_Name_Hero Passion X pro">Hero Passion X pro</option>
+        <option value="Car_Name_Hero Splender Plus">Hero Splender Plus</option>
+        <option value="Car_Name_Hero Splender iSmart">Hero Splender iSmart</option>
+        <option value="Car_Name_Hero Super Splendor">Hero Super Splendor</option>
+        <option value="Car_Name_Honda Activa 125">Honda Activa 125</option>
+        <option value="Car_Name_Honda Activa 4G">Honda Activa 4G</option>
+        <option value="Car_Name_Honda CB Hornet 160R">Honda CB Hornet 160R</option>
+        <option value="Car_Name_Honda CB Shine">Honda CB Shine</option>
+        <option value="Car_Name_Honda CB Trigger">Honda CB Trigger</option>
+        <option value="Car_Name_Honda CB Unicorn">Honda CB Unicorn</option>
+        <option value="Car_Name_Honda CB twister">Honda CB twister</option>
+        <option value="Car_Name_Honda CBR 150">Honda CBR 150</option>
+        <option value="Car_Name_Honda Dream Yuga ">Honda Dream Yuga </option>
+        <option value="Car_Name_Honda Karizma">Honda Karizma</option>
+        <option value="Car_Name_Hyosung GT250R">Hyosung GT250R</option>
+        <option value="Car_Name_KTM 390 Duke">KTM 390 Duke </option>
+        <option value="Car_Name_KTM RC200">KTM RC200</option>
+        <option value="Car_Name_KTM RC390">KTM RC390</option>
+        <option value="Car_Name_Mahindra Mojo XT300">Mahindra Mojo XT300</option>
+        <option value="Car_Name_Royal Enfield Bullet 350">Royal Enfield Bullet 350</option>
+        <option value="Car_Name_Royal Enfield Classic 350">Royal Enfield Classic 350</option>
+        <option value="Car_Name_Royal Enfield Classic 500">Royal Enfield Classic 500</option>
+        <option value="Car_Name_Royal Enfield Thunder 350">Royal Enfield Thunder 350</option>
+        <option value="Car_Name_Royal Enfield Thunder 500">Royal Enfield Thunder 500</option>
+        <option value="Car_Name_Suzuki Access 125">Suzuki Access 125</option>
+        <option value="Car_Name_TVS Apache RTR 160">TVS Apache RTR 160</option>
+        <option value="Car_Name_TVS Apache RTR 180">TVS Apache RTR 180</option>
+        <option value="Car_Name_TVS Jupyter">TVS Jupyter</option>
+        <option value="Car_Name_TVS Sport">TVS Sport </option>
+        <option value="Car_Name_TVS Wego">TVS Wego</option>
+        <option value="Car_Name_UM Renegade Mojave">UM Renegade Mojave</option>
+        <option value="Car_Name_Yamaha FZ  v 2.0">Yamaha FZ v 2.0</option>
+        <option value="Car_Name_Yamaha FZ 16">Yamaha FZ 16</option>
+        <option value="Car_Name_Yamaha FZ S ">Yamaha FZ S </option>
+        <option value="Car_Name_Yamaha FZ S V 2.0">Yamaha FZ S V 2.0</option>
+        <option value="Car_Name_Yamaha Fazer ">Yamaha Fazer </option>
+        <option value="Car_Name_alto 800">alto 800</option>
+        <option value="Car_Name_alto k10">alto k10</option>
+        <option value="Car_Name_amaze">amaze</option>
+        <option value="Car_Name_baleno">baleno</option>
+        <option value="Car_Name_brio">brio</option>
+        <option value="Car_Name_camry">camry</option>
+        <option value="Car_Name_ciaz">ciaz</option>
+        <option value="Car_Name_city">city</option>
+        <option value="Car_Name_corolla">corolla</option>
+        <option value="Car_Name_corolla altis">corolla altis</option>
+        <option value="Car_Name_creta">creta</option>
+        <option value="Car_Name_dzire">dzire</option>
+        <option value="Car_Name_elantra">elantra</option>
+        <option value="Car_Name_eon">eon</option>
+        <option value="Car_Name_ertiga">ertiga</option>
+        <option value="Car_Name_etios cross">etios cross</option>
+        <option value="Car_Name_etios g">etios g</option>
+        <option value="Car_Name_etios gd">etios gd</option>
+        <option value="Car_Name_etios liva">etios liva</option>
+        <option value="Car_Name_fortuner">fortuner</option>
+        <option value="Car_Name_grand i10">grand i10</option>
+        <option value="Car_Name_i10">i10</option>
+        <option value="Car_Name_i20">i20</option>
+        <option value="Car_Name_ignis">ignis</option>
+        <option value="Car_Name_innova">innova</option>
+        <option value="Car_Name_jazz">jazz</option>
+        <option value="Car_Name_land cruiser">land cruiser</option>
+        <option value="Car_Name_omni">omni</option>
+        <option value="Car_Name_ritz">ritz</option>
+        <option value="Car_Name_s cross">s cross</option>
+        <option value="Car_Name_swift">swift</option>
+        <option value="Car_Name_sx4">sx4</option>
+        <option value="Car_Name_verna">verna</option>
+        <option value="Car_Name_vitara brezza">vitara brezza</option>
+        <option value="Car_Name_wagon r">wagon r</option>
+        <option value="Car_Name_xcent">xcent</option>
+      </select>
+
+      <h3>Year</h3>
+      <input id="first" name="Year" type="number ">
+      <h3>What is the Showroom Price?(In lakhs)</h3><br><input id="second" name="purchase_price" required="required">
+      <h3>How Many Kilometers Drived?</h3><input id="third" name="kms_driven" required="required">
+      <h3>How much owners previously had the car(0 or 1 or 3) ?</h3><br><input id="owners" name="owners"
+        required="required">
+      <h3>What Is the Fuel type?</h3><br><select name="fuelType" id="fuelType" required="required">
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="CNG">CNG</option>
+      </select>
+      <h3>Are you A Dealer or Individual</h3><br><select name="seller_type" id="seller_type" required="required">
+        <option value="Dealer">Dealer</option>
+        <option value="Individual">Individual</option>
+      </select>
+      <h3>Transmission type</h3><br><select name="transmission" id="transmission" required="required">
+        <option value="Manual">Manual</option>
+        <option value="Automatic">Automatic</option>
+      </select>
+      <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+      <br>
+
+    </form>
+
+    <br><br>
+    <h3>{{ prediction_text }}<h3>
+  </div>
+
+
+
+
+  <style>
+    body {
+      background-color: lightslategray;
+      text-align: center;
+      padding: 0px;
+    }
+
+    #research {
+      font-size: 18px;
+      width: 100px;
+      height: 23px;
+      top: 23px;
+    }
+
+    #box {
+      border-radius: 60px;
+      border-color: 45px;
+      border-style: solid;
+      font-family: cursive;
+      text-align: center;
+      background-color: rgb(168, 131, 61);
+      font-size: medium;
+      position: absolute;
+      width: 700px;
+      bottom: 9%;
+      height: 850px;
+      right: 30%;
+      padding: 0px;
+      margin: 0px;
+      font-size: 14px;
+    }
+
+    #fuel {
+      width: 83px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 20px;
+    }
+
+    #fuel:hover {
+      background-color: coral;
+    }
+
+    #research {
+      width: 99px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+    }
+
+    #research:hover {
+      background-color: coral;
+    }
+
+    #resea {
+      width: 99px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+    }
+
+    #resea:hover {
+      background-color: coral;
+    }
+
+    #sub {
+      width: 120px;
+      height: 43px;
+      text-align: center;
+      border-radius: 14px;
+      font-size: 18px;
+    }
+
+    #sub:hover {
+      background-color: darkcyan;
+    }
+
+    #first {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #second {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #third {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #fourth {
+      border-radius: 14px;
+      height: 25px;
+      font-size: 20px;
+      text-align: center;
+    }
+  </style>
+</body>
+
+</html>
